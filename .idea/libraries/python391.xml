@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="python391">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/cobalt.app/Contents/Resources/lib/python39.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

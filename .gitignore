@@ -1,0 +1,13 @@
+__pycache__/
+
+build/
+
+dist/
+
+bin/
+
+cobalt
+
+virtual
+
+.DS_Store

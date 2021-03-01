@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="python39">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/bdist.macosx-10.15-x86_64/python3.9-standalone/app/python39.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
