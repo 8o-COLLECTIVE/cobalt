@@ -18,9 +18,9 @@ def main():
     if keyresponse.lower() == "y":
         print("\nPLEASE REMEMBER TO ENCRYPT THIS KEY BEFORE SENDING.\n\n")
         key = os.urandom(16).hex()
-        print(f"The AES key for this session is: {key}\n")
+        print("The AES key for this session is: {}\n".format(key))
         try:
-            pyperclip.copy(f"The AES key for this session is: {key}")
+            pyperclip.copy("The AES key for this session is: {}".format(key))
             print("Keystring copied to clipboard!\n")
         except:
             pass
@@ -44,10 +44,12 @@ def main():
             message = message[3:]
 
             iv = os.urandom(16)
+            
+            encryptedmessage = "{}{}{}".format(key_hash, iv.hex(), aesobj.encrypt_ctr(bytes(message, 'ascii'), iv).hex())
 
-            print(f"\nEncrypted message: {key_hash}{iv.hex()}{aesobj.encrypt_ctr(bytes(message, 'ascii'), iv).hex()}")
+            print("\nEncrypted message: {}".format(encryptedmessage))
             try:
-                pyperclip.copy(f"{key_hash}{iv.hex()}{aesobj.encrypt_ctr(bytes(message, 'ascii'), iv).hex()}")
+                pyperclip.copy(encryptedmessage)
                 print("\nMessage copied to clipboard!")
             except:
                 pass
@@ -68,14 +70,14 @@ def main():
                 iv = message[:32]
                 message = message[32:]
 
-                print(f"\nDecrypted message: {aesobj.decrypt_ctr(bytearray.fromhex(message), bytearray.fromhex(iv)).decode('ascii')}")
+                print("\nDecrypted message: {}".format(aesobj.decrypt_ctr(bytearray.fromhex(message), bytearray.fromhex(iv)).decode('ascii')))
             else:
                 yn = input("\nKey hashes do not match, attempt decrypt anyway? [Y or N] ")
 
                 if yn.lower() == "y":
                     iv = old_message[:32]
                     old_message = old_message[32:]
-                    print(f"\nDecrypted message: {aesobj.decrypt_ctr(bytearray.fromhex(old_message), bytearray.fromhex(iv)).decode('ascii')}")
+                    print("\nDecrypted message: {}".format(aesobj.decrypt_ctr(bytearray.fromhex(old_message), bytearray.fromhex(iv)).decode('ascii')))
         else:
             print("Command not recognized.")
 
