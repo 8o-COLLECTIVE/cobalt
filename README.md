@@ -6,7 +6,7 @@ AES encryption with a discord context in mind.
 
 ## On Windows
 
-please open Powershell as administrator and run:
+Please open Powershell (NOT as administrator) and run:
 
 `cmd.exe \c "$(curl -fsSL https://raw.githubusercontent.com/8o-COLLECTIVE/cobalt/master/install/install.bat)"`
 
