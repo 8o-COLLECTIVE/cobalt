@@ -4,7 +4,7 @@ set COBALT='\033[0;34mcobalt\033[0m'
 
 set COBALT_GIT_RAW="https://raw.githubusercontent.com/8o-COLLECTIVE/cobalt/master/src"
 
-set COBALT_INSTALL_DIR="C:/Program Files/cobalt"
+set COBALT_INSTALL_DIR="C:\Program Files\cobalt"
 
 net session >nul 2>&1
 if errorlevel 1 (
