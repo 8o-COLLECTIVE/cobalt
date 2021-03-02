@@ -5,9 +5,9 @@ import pyperclip
 import hashlib
 import argparse
 
-import aes
-import scraper
-import autoupdate
+from .aes import AES
+from .scraper import scrape
+from .autoupdate import Updater
 
 
 parser = argparse.ArgumentParser(description='cobalt')
@@ -24,7 +24,7 @@ class Cobalt8:
         
         self.key = self.get_key()
         
-        self.aes_obj = aes.AES(self.key)
+        self.aes_obj = AES(self.key)
         
         self.key_hash = hashlib.md5(self.key).hexdigest()
         
@@ -34,14 +34,14 @@ class Cobalt8:
     
     
     def update(self):
-        updater = autoupdate.Updater()
+        updater = Updater()
         if updater.needs_update():
             return updater.update()
     
     
     def __call__(self):
         if args.scraper:
-            scraper.scrape()
+            scrape()
         elif args.debug:
             self.get_command()
         else:

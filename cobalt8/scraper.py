@@ -1,7 +1,7 @@
 import discord
 import hashlib
 
-import aes
+from .aes import AES
 
 # Create an anonymous discord client, which retrieves the content of the selected channel and then dies.
 
@@ -19,7 +19,7 @@ def scrape():
 
         key = input("\nConversation key: ")
 
-        aesobj = aes.AES(bytearray.fromhex(key))
+        aesobj = AES(bytearray.fromhex(key))
 
         key_hash = hashlib.md5(bytearray.fromhex(key)).hexdigest()
 
