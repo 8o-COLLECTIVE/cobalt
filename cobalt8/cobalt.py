@@ -5,6 +5,8 @@ import os
 import pyperclip
 import hashlib
 import argparse
+import scraper
+import autoupdate
 
 parser = argparse.ArgumentParser(description='cobalt')
 

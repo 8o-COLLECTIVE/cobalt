@@ -2,7 +2,7 @@ import discord
 import hashlib
 import aes
 
-#create an anonymous discord client, which retrieves the content of the selected channel and then dies.
+# Create an anonymous discord client, which retrieves the content of the selected channel and then dies.
 
 print("Establishing Discord client, please hold...")
 
