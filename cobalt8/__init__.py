@@ -1,1 +1,1 @@
-from cobalt8 import Cobalt8
+from .cobalt8 import Cobalt8
