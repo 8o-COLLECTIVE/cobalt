@@ -7,7 +7,7 @@ class Updater:
 
     def needs_update(self):
         current_commit = self.repo.head.commit
-        latest_commit = repo.heads.development.commit
+        latest_commit = self.repo.heads.development.commit
         if current_commit == latest_commit:
             return False
         else:
@@ -16,3 +16,4 @@ class Updater:
     def update(self):
         proc = subprocess.Popen(["python3", "-m", "pip", "install", "cobalt8"], shell=False)
         proc.communicate()
+        return proc.exitcode
