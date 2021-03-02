@@ -12,8 +12,7 @@ class Updater:
         current_version = about["__version__"]
         
         r = requests.get('https://raw.githubusercontent.com/8o-COLLECTIVE/cobalt8/production/cobalt8/__version__.py')
-        print(r.text)
-        latest_version = r.text.split('\n')[3]
+        latest_version = r.text.split('\n')[3][15:-1]
         if current_version == latest_version:
             return False
         else:
