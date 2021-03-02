@@ -1,7 +1,5 @@
 __title__ = "cobalt8"
-__description__ = (
-    "Offline and secure AES encryption with a Discord context in mind. "
-)
+__description__ = "Offline and secure AES encryption with a Discord context in mind. "
 __url__ = "https://github.com/8o-COLLECTIVE/cobalt8"
 __version__ = "0.0.1"
 __author__ = "8o-COLLECTIVE"
