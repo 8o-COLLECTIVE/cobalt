@@ -14,13 +14,15 @@ parser = argparse.ArgumentParser(description='cobalt')
 
 parser.add_argument('--debug', action='store_true', help='use debug mode')
 parser.add_argument('--scraper', action='store_true', help='use scraping mode')
+parser.add_argument('--no-update', action='store_true', help='don\'t update on startup')
 
 args = parser.parse_args()
 
 
 class Cobalt8:
     def __init__(self):
-        exitcode = self.update() # TODO: something with this
+        if not args.no_update:
+            returncode = self.update() # TODO: something with this
         
         self.key = self.get_key()
         
