@@ -6,7 +6,7 @@ dist/
 
 bin/
 
-cobalt
+cobalt8.egg*
 
 virtual
 

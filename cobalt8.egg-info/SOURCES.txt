@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+cobalt8/__init__.py
+cobalt8/__version__.py
+cobalt8/aes.py
+cobalt8/autoupdate.py
+cobalt8/cobalt8.py
+cobalt8/scraper.py
+cobalt8.egg-info/PKG-INFO
+cobalt8.egg-info/SOURCES.txt
+cobalt8.egg-info/dependency_links.txt
+cobalt8.egg-info/top_level.txt
+scripts/cobalt8
