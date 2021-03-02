@@ -15,10 +15,8 @@ Please open Powershell (NOT as administrator) and run:
 
 Run:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/8o-COLLECTIVE/cobalt/master/install/install.sh)"`
+`python3 -m pip install cobalt8`
 
-if you don't want to compile or are having trouble doing so, please use:
+# Build instructions:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/8o-COLLECTIVE/cobalt/master/install/install_nc.sh)"`
-
-
+`python3 -m build
