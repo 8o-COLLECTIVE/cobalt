@@ -1,17 +1,24 @@
 import setuptools
+import os
+
+about = {}
+with open(os.path.join(os.path.dirname(__file__), "cobalt8", "__version__.py")) as f:
+    exec(f.read(), about)
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="cobalt8", # Replace with your own username
-    version="0.0.1",
-    author="8o COLLECTIVE",
-    author_email="8ocollective@birdlover.com",
-    description="Offline AES encryption with a Discord context in mind.",
+    name=about["__title__"],
+    packages=["cobalt8"],
+    version=about["__version__"],
+    description=about["__description__"],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/8o-COLLECTIVE/cobalt8",
+    license=about["__license__"],
+    author=about["__author__"],
+    author_email=about["__author_email__"],
+    url=about["__url__"],
     install_requires=[
         'pyperclip',
         'discord',
@@ -27,6 +34,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=['cobalt8'],
     python_requires=">=3.3",
 )
