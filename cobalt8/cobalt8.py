@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
-import aes
 import os
 import pyperclip
 import hashlib
 import argparse
+
+import aes
 import scraper
 import autoupdate
 

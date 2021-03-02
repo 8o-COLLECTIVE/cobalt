@@ -1,5 +1,6 @@
 import discord
 import hashlib
+
 import aes
 
 # Create an anonymous discord client, which retrieves the content of the selected channel and then dies.
