@@ -12,7 +12,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/8o-COLLECTIVE/cobalt8",
-    scripts=["scripts/cobalt8"],
+    entry_points={
+              'console_scripts': [
+                  'cobalt8 = cobalt8.cobalt8:entry',
+              ],
+          },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

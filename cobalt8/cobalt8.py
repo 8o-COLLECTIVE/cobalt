@@ -121,6 +121,11 @@ class Cobalt8:
             else:
                 print("Command not recognized.")
 
-if __name__ == '__main__':
-    cobalt = Cobalt8()
+
+def entry():
+    cobalt8 = Cobalt8()
     cobalt()
+
+
+if __name__ == '__main__':
+    entry()
