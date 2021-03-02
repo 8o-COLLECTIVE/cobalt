@@ -124,7 +124,7 @@ class Cobalt8:
 
 def entry():
     cobalt8 = Cobalt8()
-    cobalt()
+    cobalt8()
 
 
 if __name__ == '__main__':
