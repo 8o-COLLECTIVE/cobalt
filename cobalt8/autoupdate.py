@@ -14,7 +14,7 @@ class Updater:
         r = requests.get('https://raw.githubusercontent.com/8o-COLLECTIVE/cobalt8/production/cobalt8/__version__.py')
         print(r.text)
         latest_version = r.text.split('\n')[3]
-        if current_commit == latest_commit:
+        if current_version == latest_version:
             return False
         else:
             return True

@@ -11,3 +11,5 @@ cobalt8.egg*
 virtual
 
 .DS_Store
+
+.idea/
